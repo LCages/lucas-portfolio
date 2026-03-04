@@ -1,11 +1,420 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Header Exemple</title>
+<style>
+  /* Style global */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(26, 26, 26);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-left: 40px;
+  }
+
+  .logo-container img:hover{
+    transform: scale(1.1);
+  }
+
+  .logo-container img {
+    height: 70px;
+    transition: transform 0.3s ease;
+  }
+
+  .logo-container span {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .instagram-logo img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+  }
+
+  .instagram-logo img:hover {
+    transform: scale(1.1);
+  }
+
+  .btn-rdv {
+    padding: 10px 40px;
+    margin-right: 100px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    transition: transform 0.3s ease;
+  }
+
+  .btn-rdv:hover {
+    background-color: rgb(50, 50, 50);
+    transform: scale(1.03);
+  }
+
+  * {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* Body - image avec titre et bouton */
+  .hero {
+    height: 90vh;
+    background-image: url('images/homepage1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; 
+    color: white;
+    text-align: left; 
+    padding-left: 80px; 
+    position: relative;
+}
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+  .hero button {
+    padding: 15px 50px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(50,50,50);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .hero button:hover {
+    background-color: rgb(0, 0, 0);
+  }
+
+  .text{
+    display: flex;
+    background-color: rgb(218, 198, 181);
+    padding: 40px;
+    color : black;
+    font-family: arial;
+  }
+
+  /* Footer */
+  footer {
+    background-color: rgb(26, 26, 26);
+    color : white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  }
+
+  .massages-section {
+      display: flex;                
+      align-items: center;          
+      justify-content: space-between; 
+      padding: 50px;
+      background: rgb(26, 26, 26);
+      color: white;
+    }
+
+    /* --- Colonne gauche (texte + accordéon) --- */
+    .massages-content {
+      flex: 1;              
+      margin-right: 40px;  
+    }
+
+    .massages-content h2 {
+      font-size: 2em;       
+      margin-bottom: 20px;  
+    }
+
+    /* --- Bloc accordéon --- */
+    .accordion {
+      border: 0px;
+      border-radius: 5px;
+      overflow: hidden;
+      background-color: rgb(26, 26, 26);
+      color: white;
+    }
+
+    .accordion-item {
+      border-bottom: 10px solid rgb(26, 26, 26); /* Séparation entre chaque tiroir */
+    }
+
+    .accordion-button {
+      width: 100%;          
+      padding: 15px;
+      text-align: left;     
+      font-size: 1em;
+      background: rgb(50, 50, 50);
+      color: white;
+      border: none;
+      outline: none;
+      cursor: pointer;      
+      transition: background 0.3s; 
+    }
+
+    .accordion-button:hover {
+      background: rgb(150, 150, 150);     
+    }
+
+    /* --- Contenu caché par défaut --- */
+    .accordion-content {
+      max-height: 0;        
+      overflow: hidden;     
+      padding: 0 15px;      
+      transition: max-height 0.4s ease, padding 0.3s; 
+    }
+
+    .accordion-content p {
+      margin: 10px 0;
+    }
+
+    /* --- Quand le tiroir est ouvert --- */
+    .accordion-item.active .accordion-content {
+      max-height: 200px;   
+      padding: 15px;       
+      background-color: rgb(35, 35, 35);
+    }
+
+    /* --- Colonne droite (image) --- */
+    .massages-image {
+      flex: 1; 
+    }
+
+    .massages-image img {
+      width: 100%;          
+      max-width: 500px;     
+      border-radius: 10px;  
+    }
+
+    .accordion-section{
+      display: flex;
+      align-items: center;   
+      justify-content: space-between;
+    }
+
+    .accordion-section-p{
+      flex: 1;
+    }
+
+    .accordion-img {
+      flex: 1;
+      display: flex;
+      justify-content: center; 
+      align-items: center;
+}
+
+  .accordion-img img {
+      width: 100%;
+      max-width: 200px;  
+      border-radius: 10px;
+}
+
+.massages-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  background: rgb(26, 26, 26);
+  gap: 40px;
+}
+
+/* Colonne gauche */
+.massages-content {
+  flex: 1;
+}
+
+/* Colonne droite : images en éventail */
+.massages-gallery {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: -50px; /* superpose légèrement les images comme un éventail */
+  perspective: 1000px; /* pour un effet 3D léger si on veut */
+}
+
+.massages-gallery img {
+  width: 150px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, z-index 0.3s ease;
+  cursor: pointer;
+}
+
+.massages-gallery img:hover {
+  transform: scale(1.2) translateY(-10px); /* grossit et remonte légèrement */
+  z-index: 10; /* met l’image au-dessus des autres */
+}
+
+
+/*
+  .invite{
+    display: flex;
+    align-items: center;   
+    justify-content: space-between;
+  }
+  
+  .invite-item{
+    flex: 1;
+  }
+
+  .invite-img{
+    flex: 1;
+    justify-content: center; 
+    align-items: center;
+  }
+
+  .invite-img img{
+    width: 100%;
+    max-width: 200px;  
+    border-radius: 10px;
+  }*/
+</style>
 </head>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <body>
-    <p>test para ver se esta funcionando</p>
+
+<header>
+  <div class="logo-container">
+    <a href="index.html">
+      <img src="images/logo1.jpg" alt="Logo">
+    </a>
+    <span>Massage Corporation</span>
+  </div>
+
+  <div class="actions-container" style="display: flex; align-items: center; gap: 30px;">
+    <a class="instagram-logo" href="https://www.instagram.com/massageentreprise/" target="_blank" rel="noopener noreferrer">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo">
+    </a>
+    <a href="Contact/contact.html">
+      <button class="btn-rdv">Contactez-nous</button>
+    </a>
+    
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Bienvenue chez Massage <br> Corporation</h1>
+  <a href="Contact/contact.html">
+    <button class="hero-btn">Contactez-nous</button>
+  </a>
+  
+</section>
+
+<section class="text">
+  <p>Le massage thaïlandais est un massage holistique ancestral pratiqué traditionnellement habillé sur un tapis au sol, combinant pressions des mains, des pouces, des coudes et des genoux avec des étirements inspirés du yoga. Il vise à libérer les tensions musculaires, harmoniser la circulation de l'énergie (les "sen") et améliorer la souplesse et l'équilibre général du corps.</p>
+</section>
+
+<section class="massages-section">
+  <!-- Colonne gauche : texte et accordéon -->
+  <div class="massages-content">
+    <h2>Voici les massages</h2>
+
+    <div class="accordion">
+      <div class="accordion-item">
+        <button class="accordion-button">Massage relaxant</button>
+        <div class="accordion-content">
+          <p>Un massage doux qui aide à détendre les muscles et apaiser le stress.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-button">Massage thérapeutique</button>
+        <div class="accordion-content">
+          <p>Conçu pour soulager les tensions musculaires profondes et améliorer la circulation.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-button">Massage aux pierres chaudes</button>
+        <div class="accordion-content">
+          <p>Une expérience apaisante utilisant la chaleur des pierres pour relaxer le corps.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Colonne droite : images en éventail -->
+  <div class="massages-gallery">
+    <img src="images/homepage4_edited.jpg" alt="Massage 1" style="margin-right: 5px">
+    <img src="images/homepage3_edited.jpg" alt="Massage 2" style="margin-right: 5px">
+    <img src="images/homepage2_edited.jpg" alt="Massage 3" style="margin-right: 5px">
+    <img src="images/homepage1_edited.jpg" alt="Massage 4">
+  </div>
+</section>
+
+<script>
+const items = document.querySelectorAll(".accordion-item");
+items.forEach(item => {
+  const button = item.querySelector(".accordion-button");
+  button.addEventListener("click", () => {
+    item.classList.toggle("active");
+  });
+});
+</script>
+
+<!--
+<section class="invite">
+  <div class="invite-img">
+      <img src="images/homepage3.jpg">
+  </div>
+  <div class="invite-item">
+    <p>S'il vous plait, contactez nous !</p>
+    <button class="invite-button">Contactez-nous !</button>
+  </div>
+</section>-->
+
+<script>
+    
+  const items = document.querySelectorAll(".accordion-item");
+
+    
+  items.forEach(item => {
+    const button = item.querySelector(".accordion-button");
+
+      
+    button.addEventListener("click", () => {
+        
+      item.classList.toggle("active");
+    });
+  });
+</script>
+
+
+<!-- Footer -->
+<footer>
+  &copy; 2025 Massage Corporation. Tous droits réservés.
+</footer>
+
 </body>
 </html>

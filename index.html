@@ -1,141 +1,64 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio Lucas Cabral</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas Cabral | Portfólio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
 <body>
 
-<header>
-  <div class="logo-container">
-    <a href="index.html">
-      <p class="logo">Lucas Cabral</p>
-    </a>
-    <span>Massage Corporation</span>
-  </div>
+    <!-- HEADER -->
+    <header>
+        <div class="logo">Lucas Cabral</div>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#ferramentas">Ferramentas</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#cursos">Cursos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <div class="nav-links">
-    <a class="Sobre">
-      <button class="btn-sobre">Sobre</button>
-    </a>
-    <a class="Ferramentas"></a>
-      <button class="btn-ferramentas">Ferramentas</button>
-    </a>
-    <a class="Projetos"></a>
-      <button class="btn-projetos">Projetos</button>
-    </a>
-    <a class="Cursos"></a>
-      <button class="btn-cursos">Cursos</button>
-    </a>
-    <a class="Contato"></a>
-      <button class="btn-contato">Contato</button>
-    </a>
-    
-  </div>
-</header>
+    <!-- APRESENTAÇÃO -->
+    <section class="hero">
+        <h1>Olá, eu sou <span>Lucas Cabral</span></h1>
+        <h2>Estudante de Engenharia de Computação</h2>
+        <p>Disponível para estágio e oportunidades.</p>
 
-<section class="welcome">
-  <p>Ola, eu sou</p>
-  <h1>Lucas Cabral</h1>
-  <h2>Eu sou estudante em Engenharia de Computação</h2>
-  <p>Disponível para estágio e oportunidades</p>
-  <a href="Contact/contact.html">
-    <button class="hero-btn">Contactez-nous</button>
-  </a>  
-  
-</section>
-
-<section class="text">
-  <p>Le massage thaïlandais est un massage holistique ancestral pratiqué traditionnellement habillé sur un tapis au sol, combinant pressions des mains, des pouces, des coudes et des genoux avec des étirements inspirés du yoga. Il vise à libérer les tensions musculaires, harmoniser la circulation de l'énergie (les "sen") et améliorer la souplesse et l'équilibre général du corps.</p>
-</section>
-
-<section class="massages-section">
-  <!-- Colonne gauche : texte et accordéon -->
-  <div class="massages-content">
-    <h2>Voici les massages</h2>
-
-    <div class="accordion">
-      <div class="accordion-item">
-        <button class="accordion-button">Massage relaxant</button>
-        <div class="accordion-content">
-          <p>Un massage doux qui aide à détendre les muscles et apaiser le stress.</p>
+        <div class="buttons">
+            <a href="#contato" class="btn-primary">Contato</a>
+            <a href="#projetos" class="btn-secondary">Projetos</a>
         </div>
-      </div>
+    </section>
 
-      <div class="accordion-item">
-        <button class="accordion-button">Massage thérapeutique</button>
-        <div class="accordion-content">
-          <p>Conçu pour soulager les tensions musculaires profondes et améliorer la circulation.</p>
-        </div>
-      </div>
+    <!-- SOBRE -->
+    <section id="sobre" class="sobre">
+        <h2>Sobre Mim</h2>
+        <p>
+            Sou estudante de Engenharia da Computação na Universidade Adventista de São Paulo (UNASP), campus Engenheiro Coelho, com interesse na área de tecnologia e desenvolvimento.
+        </p>
 
-      <div class="accordion-item">
-        <button class="accordion-button">Massage aux pierres chaudes</button>
-        <div class="accordion-content">
-          <p>Une expérience apaisante utilisant la chaleur des pierres pour relaxer le corps.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+        <p>
+            Iniciei meus estudos em informática ainda no ensino médio, realizado na França, com especialização na área, o que despertou meu interesse por tecnologia e programação. Desde então, venho aprofundando meus conhecimentos e desenvolvendo habilidades técnicas por meio de estudos e projetos acadêmicos.
+        </p>
 
-  <!-- Colonne droite : images en éventail -->
-  <div class="massages-gallery">
-    <img src="images/homepage4_edited.jpg" alt="Massage 1" style="margin-right: 5px">
-    <img src="images/homepage3_edited.jpg" alt="Massage 2" style="margin-right: 5px">
-    <img src="images/homepage2_edited.jpg" alt="Massage 3" style="margin-right: 5px">
-    <img src="images/homepage1_edited.jpg" alt="Massage 4">
-  </div>
-</section>
+        <p>
+            Possuo conhecimentos em Python, C, SQL e HTML/CSS, além de experiência com a plataforma WordPress. Sou fluente em francês e português e tenho nível intermediário em inglês e espanhol, o que me permite atuar em ambientes multiculturais.
+        </p>
 
-<script>
-const items = document.querySelectorAll(".accordion-item");
-items.forEach(item => {
-  const button = item.querySelector(".accordion-button");
-  button.addEventListener("click", () => {
-    item.classList.toggle("active");
-  });
-});
-</script>
+        <p>
+            Busco uma oportunidade de estágio em tecnologia para aplicar meus conhecimentos na prática, aprender com profissionais experientes e continuar evoluindo tecnicamente.
+        </p>
+    </section>
 
-<!--
-<section class="invite">
-  <div class="invite-img">
-      <img src="images/homepage3.jpg">
-  </div>
-  <div class="invite-item">
-    <p>S'il vous plait, contactez nous !</p>
-    <button class="invite-button">Contactez-nous !</button>
-  </div>
-</section>-->
-
-<script>
-    
-  const items = document.querySelectorAll(".accordion-item");
-
-    
-  items.forEach(item => {
-    const button = item.querySelector(".accordion-button");
-
-      
-    button.addEventListener("click", () => {
-        
-      item.classList.toggle("active");
-    });
-  });
-</script>
-
-
-<!-- Footer -->
-<footer>
-  &copy; 2025 Massage Corporation. Tous droits réservés.
-</footer>
+    <!-- Espaço futuro para outras seções -->
+    <section id="ferramentas"></section>
+    <section id="projetos"></section>
+    <section id="cursos"></section>
+    <section id="contato"></section>
 
 </body>
 </html>

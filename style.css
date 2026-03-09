@@ -28,20 +28,13 @@ header {
     justify-content: center;
     align-items: center;
 
-    padding: 12px;
-
+    padding: 8px;
+    
     background: rgba(255,255,255,0.08);
-
-    backdrop-filter: blur(25px) saturate(180%);
-    -webkit-backdrop-filter: blur(25px) saturate(180%);
-
+    backdrop-filter: blur(20px);
     border-radius: 50px;
 
-    border: 1px solid rgba(255,255,255,0.2);
-
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-
-    z-index: 9999;  
+    border: 1px solid rgba(255,255,255,0.15);
 }
 
 .logo {
@@ -60,17 +53,17 @@ nav a {
     position: relative;
     text-decoration: none;
     color: white;
-    padding: 8px 18px;
+    padding: 10px 18px;
     border-radius: 30px;
     font-size: 14px;
-    transition: all 0.3s ease;
+    transition: 0.3s;
 }
 
+/* contorno animado */
 nav a.active {
     border: 1px solid rgba(255,255,255,0.6);
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255,255,255,0.1);
 }
-
 
 nav a:hover {
     color: white;
@@ -91,22 +84,18 @@ nav a:hover {
     font-size: 64px;
     font-weight: 600;
     line-height: 1.1;
-    color: rgb(255, 255, 255);
 }
 
 .hero h2 {
     margin-top: 20px;
     font-weight: 400;
     opacity: 0.8;
-    color: rgb(255, 255, 255);
 }
 
 .hero p {
-    margin-top: 20px;
-    font-weight: 300;
+    margin-top: 15px;
     opacity: 0.7;
-    color: rgb(255, 255, 255);
-    font-size: 16px;
+    font-size: 18px;
 }
 
 /* BOTÕES GLASS */
@@ -118,161 +107,47 @@ nav a:hover {
 
 .btn-primary,
 .btn-secondary {
-    padding: 20px 40px;
+    padding: 14px 30px;
     border-radius: 50px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
 
     background: rgba(255, 255, 255, 0.1);
-    color: rgb(255, 255, 255);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.2);
 
-    border: 1px solid rgb(255, 255, 255);
-
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .btn-primary:hover,
 .btn-secondary:hover {
-    transform: translateY(-2px);
-    opacity: 0.9;
-}
-
-.menu-lateral{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.social-box{
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-
-.social-box img{
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.social-box img:hover{
-    transform: scale(1.2);
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-3px);
 }
 
 /* SOBRE GLASS CARD */
-/* SECTION */
+.sobre {
+    margin: 120px auto;
+    width: 80%;
+    padding: 60px;
 
-.sobre{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:80px 10%;
-}
-
-/* GRID PRINCIPAL */
-
-.sobre-container{
-    display:grid;
-    grid-template-columns: 1.3fr 1fr;
-    gap:60px;
-    width:100%;
-    max-width:1200px;
-}
-
-/* QUADRADO DO TEXTO */
-
-.sobre-texto{
-    background: rgba(255,255,255,0.08);
-    backdrop-filter: blur(25px);
-    border-radius:20px;
-    padding:40px;
-    color:white;
-    border: 1px solid rgb(255, 255, 255);
-}
-
-/* TITULO */
-
-.sobre-texto h2{
-    font-size:32px;
-    margin-bottom:20px;
-}
-
-/* PARAGRAFOS */
-
-.sobre-texto p{
-    margin-bottom:15px;
-    line-height:1.6;
-    opacity:0.9;
-}
-
-/* COLUNA DOS BOTÕES */
-
-.sobre-botoes{
-    display:grid;
-    grid-template-rows: repeat(3,1fr);
-    gap: 50px;
-}
-
-/* BOTÕES */
-
-.sobre-btn{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    padding:25px;
+    background: rgba(255,255,255,0.07);
+    backdrop-filter: blur(25px) saturate(160%);
+    -webkit-backdrop-filter: blur(25px);
 
     border-radius: 30px;
+    border: 1px solid rgba(255,255,255,0.15);
 
-    text-decoration:none;
-    color:white;
-
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgb(255, 255, 255);
-
-    transition:0.35s;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
 }
 
-/* TEXTO PEQUENO */
-
-.sobre-btn span{
-    font-size:14px;
-    opacity:0.8;
-    margin-top:6px;
+.sobre h2 {
+    margin-bottom: 30px;
+    font-size: 32px;
 }
 
-/* HOVER */
-
-.sobre-btn:hover{
-    transform:translateY(-5px) scale(1.02);
-    background: rgba(255,255,255,0.18);
-}
-
-/* ANIMAÇÃO ENTRANDO DA DIREITA */
-
-.sobre-botoes a{
-    transform:translateX(200px);
-    opacity:0;
-    animation: slideButtons 1s forwards;
-}
-
-.sobre-botoes a:nth-child(1){
-    animation-delay:0.2s;
-}
-
-.sobre-botoes a:nth-child(2){
-    animation-delay:0.4s;
-}
-
-.sobre-botoes a:nth-child(3){
-    animation-delay:0.6s;
-}
-
-@keyframes slideButtons{
-    to{
-        transform:translateX(0);
-        opacity:1;
-    }
+.sobre p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    opacity: 0.85;
 }
